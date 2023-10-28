@@ -1,0 +1,84 @@
+# Ignore compiled binary files
+*.o
+*.out
+*.exe
+
+# Ignore logs and databases
+*.log
+*.sqlite
+*.log.*
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore Python virtual environment
+venv/
+__pycache__/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore text editor backup files
+*~
+
+# Ignore environment-specific files
+.env
+.env.local
+
+# Ignore package-lock.json for npm
+package-lock.json
+
+# Ignore compiled Java class files
+*.class
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore compiled C/C++ files
+*.suo
+*.user
+*.sln
+*.vcxproj
+*.swp
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore Ruby gemsets
+*.rvmrc
+
+# Ignore database configurations
+config/database.yml
+
+# Ignore OS-specific files
+Thumbs.db
+desktop.ini
+
+# Ignore SSH keys
+*.pub
+
+# Ignore web server logs
+logs/
+
+# Ignore application-specific configurations
+config/application.yml
+
+# Ignore compiled .NET Core files
+bin/
+obj/
+
+# Ignore project-specific files and directories
+project-specific-directory/
+project-specific-file
+
+# Ignore generated files and directories
+generated/
+
+# Ignore our massive files
+subreddit_data/*
