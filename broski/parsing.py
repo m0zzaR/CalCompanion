@@ -1,6 +1,9 @@
 import json
 import jsonlines
 from datetime import datetime
+import together
+import prompting
+import time
 
 # Convert Unix timestamp to a readable date
 def unix_to_readable_date(timestamp):
@@ -8,9 +11,47 @@ def unix_to_readable_date(timestamp):
 
 def processDataDefault():
     input_file_path = "./raw_berkeley_posts.json"
-    output_file_path = "./output.jsonl"
+    output_file_path = "./outputLLM.jsonl"
     processData(input_file_path, output_file_path)
 
+
+def processDataLLM(input_file, output_file):
+
+    with open(input_file, 'r') as infile:
+        data = json.load(infile)
+    c = 0
+    transformed_data = []
+    for item in data:
+        c += 1
+        print(c)
+        comments = item.get('comments', [])
+        if comments is None:
+            continue
+        questionData = [(item['title'], item['body'])]
+        answerData = []
+        for i in range(len(comments)):
+            if (i >= 3 or comments[i] is None):
+                break
+            answerData.append(comments[i].get('body', ''))
+
+        questionParaphrase = prompting.parserPrompt(f"Summarize this title and body into one question: {questionData[0][0]}\n{questionData[0][1]}")
+        time.sleep(0.1)
+        answerParaphrase = prompting.parserPrompt(f"Summarize these three comments and get the general idea: {' '.join(answerData)}")
+        time.sleep(0.1)
+
+        title_body = f"<human>: {questionParaphrase}"
+        
+        # Assuming comments is a field in each item and is sorted in descending order of upvotes
+        formatted_item = {
+            "text": f"<bot>: {answerParaphrase}"
+        }
+        transformed_data.append(formatted_item)
+
+    
+    with open(output_file, 'w') as outfile:
+        for item in transformed_data:
+            json.dump(item, outfile)
+            outfile.write('\n')  # Write each item on a new line
 
 def processData(input_file, output_file):
 
@@ -18,16 +59,21 @@ def processData(input_file, output_file):
         data = json.load(infile)
         
     transformed_data = []
+    c = 0
     for item in data:
-        title_body = f"[INST] {item['title']} {item['body']} [/INST]"
+        c+=1
+        print(c)
+        if "[deleted" in item['title'] or "[deleted" in item['body']:
+            continue
+        title_body = f"<human>: {item['title']} {item['body']}"
         
         # Assuming comments is a field in each item and is sorted in descending order of upvotes
         comments = item.get('comments', [])
-        if not comments:
+        if not comments or "[deleted" in comments[0].get('body', '') or "This post has been removed" in comments[0].get('body', ''):
             continue
         highest_upvoted_comment = comments[0].get('body', '')
         formatted_item = {
-            "text": f"{title_body}[ANS] {highest_upvoted_comment} [/ANS]"
+            "text": f"{title_body} <bot>: {highest_upvoted_comment}"
         }
         transformed_data.append(formatted_item)
     
@@ -35,6 +81,7 @@ def processData(input_file, output_file):
         for item in transformed_data:
             json.dump(item, outfile)
             outfile.write('\n')  # Write each item on a new line
+
 
 def oldParser():
     # Load the submissions
