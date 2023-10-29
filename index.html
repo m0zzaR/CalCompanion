@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: 'Encode Sans', sans-serif; /* Change the font-family to 'Encode Sans' */
+            margin: 0;
+            padding: 0;
+            background-color: #216277; /* Set the background color */
+        }
+
+        #header {
+            background-color: #216277; /* Set the background color of the header */
+            text-align: left; /* Left-align the header text */
+            padding: 10px;
+        }
+
+        #header h1 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            font-family: 'EB Garamond', serif; /* Change the font-family of the header text */
+            font-style: italic; /* Italicize the header text */
+        }
+
+        #chat-container {
+            max-height: 80vh;
+            overflow-y: auto;
+            background-color: #216277; /* Set the background color of the chat container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px; /* Make the corners more rounded */
+            max-width: 70%;
+            text-align: left; /* Left-align text within chat bubbles */
+            word-wrap: break-word; /* Allow text to wrap within chat bubbles */
+            font-size: 15px; /* Decrease font size by 1 point */
+        }
+
+        .you {
+            background-color: #08bbbb; /* Change the color for "you" */
+            color: white;
+            align-self: flex-end;
+            width: 50%; /* Occupy the right half of the screen */
+        }
+
+        .u-broski {
+            background-color: #01a4db; /* Change the color for "u/broski" */
+            color: white;
+            align-self: flex-start;
+            width: 50%; /* Occupy the left half of the screen */
+        }
+
+        #input-container {
+            position: fixed;
+            bottom: 0;
+            width: 90%; /* Change the width to 90% */
+            margin: 0 5%; /* Add 5% margin on each side for centering */
+            background-color: #216277; /* Set the background color */
+            padding: 10px;
+            border-radius: 20px; /* Make the corners more rounded */
+        }
+
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px; /* Make the corners more rounded */
+            font-family: 'Encode Sans', sans-serif; /* Change the font-family of the input */
+            color: #707070; /* Set the text color to #707070 */
+            font-size: 14px; /* Decrease font size by 1 point */
+            word-wrap: break-word; /* Allow text to wrap within the input container */
+            resize: vertical; /* Allow the input container to expand vertically */
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond">
+</head>
+<body>
+    <header id="header">
+        <h1>brOSKI</h1>
+    </header>
+
+    <div id="chat-container">
+        <div class="message you">Hello!</div>
+        <div class="message u-broski">What's goooood dawg, I'm u/brOSKI. Ask me all the shit you want about this stupidass school and I will answer.</div>
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="user-input" placeholder="Type a message...">
+    </div>
+
+    <script>
+        const chatContainer = document.getElementById("chat-container");
+        const userInputElement = document.getElementById("user-input");
+
+        function addMessage(text, className) {
+            const messageDiv = document.createElement("div");
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${className}`;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        userInputElement.addEventListener("keypress", function (event) {
+            if (event.key === "Enter" && userInputElement.value.trim() !== "") {
+                addMessage(userInputElement.value, "you");
+                userInputElement.value = "";
+                // Simulate a response from the bot (you can replace this with actual bot logic)
+                setTimeout(() => {
+                    addMessage("This is a response from the chatbot. This is a long bot message that wraps to the next line to test text wrapping.", "u-broski");
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
