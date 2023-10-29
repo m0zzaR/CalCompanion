@@ -1,15 +1,21 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import the CORS class
 import broski.prompting as broski
+import together
+from broski_inference import ask_question
 
 app = Flask(__name__)
 CORS(app)
 
-prompt = ""
+together.api_key = "a66ca7b7091cd606df07d72d5f103a61a3f62762312437bcdf5304211e9f558e"
+
+stream = ""
 def processText(text):
-    global prompt
-    bruh = broski.parserPrompt(text)
-    return bruh
+    global stream
+    stream += f"<human>: {text}\n<bot>:"
+    resp = ask_question(stream)
+    stream += resp
+    return resp
 
 @app.route('/processText', methods=['POST'])
 def handle_request():

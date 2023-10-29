@@ -1,8 +1,8 @@
 import json
 
 
-IN_PATH = "reddit_berkeley_posts.json"
-OUT_PATH = "raw_berkeley_posts.json"
+IN_PATH = "berkeley_posts_2023-09(1).json"
+OUT_PATH = "berkeley_posts_2023-09(final).json"
 
 all_data = []
 with open(IN_PATH, 'r') as json_file:

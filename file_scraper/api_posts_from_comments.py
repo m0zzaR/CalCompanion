@@ -12,7 +12,7 @@ reddit = praw.Reddit(
 # Define your list of Reddit comments (each comment is a dictionary)
 comments = []
 
-with open("berkeley_comments.json", "r") as json_file:
+with open("berkeley_posts_2023-08.json", "r") as json_file:
     for line in json_file:
         comments.append(json.loads(line))
 
@@ -53,7 +53,7 @@ for link_id, post_comments in comment_link_ids.items():
 
 # Save data to json file
 try:
-    with open("reddit_berkeley_posts.json", 'w') as json_file:
+    with open("berkeley_posts_2023-08(1).json", 'w') as json_file:
         for post in posts:
             json.dump(post, json_file)
             json_file.write('\n')
