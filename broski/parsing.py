@@ -11,7 +11,7 @@ def unix_to_readable_date(timestamp):
 
 def processDataDefault():
     input_file_path = "./raw_berkeley_posts.json"
-    output_file_path = "./outputLLM.jsonl"
+    output_file_path = "./outputraw.jsonl"
     processData(input_file_path, output_file_path)
 
 

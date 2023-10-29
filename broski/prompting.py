@@ -39,4 +39,4 @@ def parserPrompt(x):
     )
 
     # print generated text
-    return output['prompt'][0]+output['output']['choices'][0]['text'], output['output']['choices'][0]['text']
+    return output['output']['choices'][0]['text']
