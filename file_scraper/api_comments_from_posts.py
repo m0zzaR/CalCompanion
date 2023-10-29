@@ -11,9 +11,18 @@ reddit = praw.Reddit(
 # Load the list of Reddit posts (each post is a dictionary) from the JSON file
 posts = []
 
-with open("reddit_berkeley_posts.json", "r") as json_file:
+with open("berkeley_posts.json", "r") as json_file:
     for line in json_file:
         post = json.loads(line)
+
+        # Skip posts without comments
+        if post["num_comments"] == 0:
+            continue
+
+        # Skip posts with pictures
+        if not post["selftext"]:
+            continue
+
         post = {
             "title": post["title"],
             "body": post["selftext"],
