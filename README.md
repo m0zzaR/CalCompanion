@@ -15,9 +15,9 @@ in this github. Stay tuned, because we have future visions of expanding the mode
 
 # Here are some images of just the finetuned model, no contextual analysis is ran here.
 # In other words, this is just the "bro" side of u/brOSKI
-<img width="767" alt="are you a berkeley student" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/f7aa96f2-e459-4b09-9d21-566bc57a7689">
-<img width="763" alt="do you have feelings for me" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/2a0f6c81-c771-4ba1-bff1-6aa3b17456da">
+
 <img width="746" alt="im a person" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/cdcdf748-7517-4181-88c4-651cba1fac68">
+<img width="767" alt="are you a berkeley student" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/f7aa96f2-e459-4b09-9d21-566bc57a7689">
 <img width="763" alt="paulin" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/a8af1df9-3c25-48f3-9cf9-9d33b89d80b1">
 <img width="737" alt="whats the meaning of life" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/d2564557-7e91-401a-966b-d13705ca0646">
 
