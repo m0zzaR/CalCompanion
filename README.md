@@ -26,8 +26,8 @@ and body are the "question" and the most upvoted comment is the "answer". The mo
 is MUCH MUCH room for improvement here considering our biggest limiting factor was finding and downloading data
 within the CalHacks time frame. 
 
-# Guide for running context ONLY chat bot 
-*Does not work well as a standalone bot*
+# Guide for running context ONLY chat bot *Does not work well as a standalone bot*
+
 requirements
 ```
 pip install together
