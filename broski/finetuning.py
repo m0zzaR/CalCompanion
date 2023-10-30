@@ -16,6 +16,6 @@ def train():
     batch_size = 4,
     learning_rate = 1e-5,
     suffix = 'broski',
-    wandb_api_key = '95cabb2f0d82c34f322d7a8964f79ceb67267928',
+    wandb_api_key = '',
   )
   return resp
