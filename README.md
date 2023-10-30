@@ -7,9 +7,9 @@ and enrollment information.
 
 u/brOSKI is finetuned with the help of together.ai, which offers a very easy to use API to train and deploy the model. Unfortunately, the API
 does not yet support your finetuned models to be used with your local code. So unless you are signed into my account, you
-cannot YET talk to u/brOSKI. Nonetheless, there will be some pictures provided below of some of the awesomely funny answers u/brOSKI gives.
+cannot YET talk to u/brOSKI. Nonetheless, there will be some pictures provided below of some of the funny answers u/brOSKI gave after chating with it for about 10 minutes.
 
-This program was build during CalHacks 2023 so it has only been in development for about 48 hours (as of 10/29/2023). Considering the extremely
+This program was built during CalHacks 2023 so it has only been in development for about 48 hours (as of 10/29/2023). Considering the extremely
 short time frame, we are extremely happy with the results of our model. All of the code that we used during those 48 hours are provided here
 in this github. Stay tuned, because we have future visions of expanding the model even more!
 
