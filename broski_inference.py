@@ -4,7 +4,7 @@ from threaded_chunk_processing import process_chunks_in_parallel
 
 
 MAX_CHUNK_SIZE = 20_000  # characters
-together.api_key = "a66ca7b7091cd606df07d72d5f103a61a3f62762312437bcdf5304211e9f558e"
+together.api_key = ""
 
 
 def inference(prompt: str, max_tokens=512) -> str:
