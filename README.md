@@ -14,7 +14,7 @@ short time frame, we are extremely happy with the results of our model. All of t
 in this github. Stay tuned, because we have future visions of expanding the model even more!
 
 # Here are some images of just the finetuned model, no contextual analysis is ran here.
-# In other words, this is just the "bro" side of u/brOSKI
+*In other words, this is just the "bro" side of u/brOSKI*
 
 <img width="746" alt="im a person" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/cdcdf748-7517-4181-88c4-651cba1fac68">
 <img width="767" alt="are you a berkeley student" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/f7aa96f2-e459-4b09-9d21-566bc57a7689">
