@@ -3,7 +3,7 @@ import together
 import time
 from requests.exceptions import HTTPError
 
-together.api_key = "a66ca7b7091cd606df07d72d5f103a61a3f62762312437bcdf5304211e9f558e"
+together.api_key = ""
 
 def inference(question: str, max_tokens=512) -> str:
     prompt = f"<human>: {question}\n<bot>:"

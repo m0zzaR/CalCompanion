@@ -1,7 +1,7 @@
 import sys
 import together
 
-together.api_key ="a66ca7b7091cd606df07d72d5f103a61a3f62762312437bcdf5304211e9f558e"
+together.api_key =""
 
 def ask():
   print("Say 'exit' in order to leave chat bot")

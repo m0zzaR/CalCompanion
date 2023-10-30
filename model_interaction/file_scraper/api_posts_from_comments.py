@@ -4,9 +4,9 @@ from collections import defaultdict
 
 # Initialize a Reddit API instance
 reddit = praw.Reddit(
-    client_id='5c1m98mij6JP5fhOL9qlJg',
-    client_secret='30wKGaU44pjkYR8Kv_4Gb3iykh3h1w',
-    user_agent='broski v1.0',
+    client_id='',
+    client_secret='',
+    user_agent='',
 )
 
 # Define your list of Reddit comments (each comment is a dictionary)
