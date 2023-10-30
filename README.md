@@ -40,4 +40,5 @@ Step 1> while inside ./CalCompanion run
 python api.py
 ```
 Step 2> open up the index.html fine
+
 Step 3> Chat away!
