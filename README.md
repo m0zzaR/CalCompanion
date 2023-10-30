@@ -21,7 +21,7 @@ in this github. Stay tuned, because we have future visions of expanding the mode
 <img width="763" alt="paulin" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/a8af1df9-3c25-48f3-9cf9-9d33b89d80b1">
 <img width="737" alt="whats the meaning of life" src="https://github.com/m0zzaR/CalCompanion/assets/83364878/d2564557-7e91-401a-966b-d13705ca0646">
 
-The data we used for this model was about 3500 lines of r/berkeley posts formated in Q&A style. Where the title
+The data we used for this model was about 3500 lines of r/berkeley posts from 2023 formated in Q&A style. Where the title
 and body are the "question" and the most upvoted comment is the "answer". The model is trained for 6 epochs. There
 is MUCH MUCH room for improvement here considering our biggest limiting factor was finding and downloading data
 within the CalHacks time frame. 
