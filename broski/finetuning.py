@@ -1,7 +1,7 @@
 import sys
 import together
 
-together.api_key = "f2458062d03be3ce2e26da297a5cb6208a47aeaaeb04f6bad7e83388bf296beb"
+together.api_key = ""
 def preTrain():
   resp = together.Files.upload(file="./finaloutput.jsonl")
   return resp['id']
