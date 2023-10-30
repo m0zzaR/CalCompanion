@@ -6,7 +6,7 @@ and in order to get the knowledge and accuracy of a Cal advisor, we use context 
 and enrollment information.
 
 u/brOSKI is finetuned with the help of together.ai, which offers a very easy to use API to train and deploy the model. Unfortunately, the API
-does not yet support your finetuned models to be used with your local code, only on the together.ai website. So unless you are signed into my account, you
+does not yet support your finetuned models to be used with your local code. So unless you are signed into my account, you
 cannot YET talk to u/brOSKI. Nonetheless, there will be some pictures provided below of some of the awesomely funny answers u/brOSKI gives.
 
 This program was build during CalHacks 2023 so it has only been in development for about 48 hours (as of 10/29/2023). Considering the extremely
