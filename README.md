@@ -31,8 +31,9 @@ within the CalHacks time frame.
 # Guide for running context chat bot into a localHost*
 *Context analysis chat bot, the "u/OSKI" side of u/brOSKI*
 
-You need to use your own together.ai API Key to run this program. 
-requirements
+You need to use your own together.ai API Key to run this program.
+
+Requirements:
 ```
 pip install together
 pip install flask
